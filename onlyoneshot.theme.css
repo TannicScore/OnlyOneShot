@@ -82,3 +82,5 @@
   --bd-blue-hover: var(--hover-color);
   --bd-blue-active: var(--hover-color);
 }
+
+@import url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/main/emoji.css');
