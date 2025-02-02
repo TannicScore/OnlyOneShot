@@ -3,5 +3,5 @@
 
 Add this online theme to use the theme:
 ```
-
+https://raw.githubusercontent.com/TannicScore/OnlyOneShot/main/onlyoneshot.theme.css
 ```
