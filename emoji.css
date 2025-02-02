@@ -11,13 +11,3 @@
 	background: transparent !important;
 	content: url("https://raw.githubusercontent.com/TannicScore/OnlyOneShot/main/sun.png") !important;
 }
-@namespace xlink 'http://www.w3.org/1999/xlink';
-.sprite__04eed {
-	-webkit-mask: none !important;
-	background-color: transparent !important;
-	background-position: var(--custom-emoji-sprite-bg-position) !important;
-	background-size: var(--custom-emoji-sprite-bg-size) !important;
-}
-.spriteGreyscale__04eed {
-	filter: grayscale(1) !important;
-}
