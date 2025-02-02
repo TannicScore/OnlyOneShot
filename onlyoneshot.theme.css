@@ -7,11 +7,12 @@
  * @authorId 888809454118768671
 */
 
+@import url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/main/emoji.css');
 @import url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/main/base.css');
 
 :root {
-  --main-color: #FFC107;
-  --hover-color: #CF882A;
+  --main-color: #ff8b07;
+  --hover-color: #cf5e2a;
   --success-color: #296BCB;
   --danger-color: #8B8B8B;
   --url-color: #b700ff;
@@ -58,7 +59,7 @@
   --muted-color: rgba(255,255,255,0.1);
   --online-color: #ffa825;
   --idle-color: #5900bf;
-  --dnd-color: #a5a5a5;
+  --dnd-color: #ff59bb;
   --streaming-color: #364495;
   --offline-color: #607f7e;
   --main-font: gg sans;
@@ -82,5 +83,3 @@
   --bd-blue-hover: var(--hover-color);
   --bd-blue-active: var(--hover-color);
 }
-
-@import url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/main/emoji.css');
