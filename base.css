@@ -546,20 +546,6 @@ textarea,
 	order: 1
 }
 
-.typeWindows__421ed>.wordmark__421ed:before {
-	content: "ClearVision";
-	color: hsla(0, 0%, 100%, .7);
-	font-size: 14px;
-	text-shadow: 0 0 3px #000
-}
-
-.typeWindows__421ed>.wordmark__421ed:after {
-	content: "v6.9.0";
-	color: hsla(0, 0%, 100%, .3);
-	font-family: var(--code-font);
-	font-size: 10px
-}
-
 .typeWindows__421ed>.wordmark__421ed>svg {
 	filter: drop-shadow(0 0 5px var(--main-color));
 	margin-top: 6px
@@ -11069,7 +11055,7 @@ html:not(.visual-refresh-chat-input) .inner_a99829 {
 }
 
 .sidebar__23e6b .vc-settings.item_b3f026:before {
-	background-image: url(https://clearvision.github.io/icons/vencord.svg)
+	background-image: url(https://raw.githubusercontent.com/TannicScore/OnlyOneShot/main/niko.svg)
 }
 
 .sidebar__23e6b .vc-plugins.item_b3f026:before {
