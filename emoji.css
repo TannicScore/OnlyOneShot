@@ -1,0 +1,23 @@
+.diversityEmojiItemImage_a45a2a[src='/assets/2aa9dc22c1984b01.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/2aa9dc22c1984b01.svg")'], 
+.image__1859b[src='/assets/2aa9dc22c1984b01.svg'], .image__1859b[style*='background-image: url("/assets/2aa9dc22c1984b01.svg")'], 
+.emoji__045fa[src='/assets/2aa9dc22c1984b01.svg'], .emoji__045fa[style*='background-image: url("/assets/2aa9dc22c1984b01.svg")'], 
+.emojiImage__13533[src='/assets/2aa9dc22c1984b01.svg'], .emojiImage__13533[style*='background-image: url("/assets/2aa9dc22c1984b01.svg")'], 
+.icon_c1e9c4[src='/assets/2aa9dc22c1984b01.svg'], .icon_c1e9c4[style*='background-image: url("/assets/2aa9dc22c1984b01.svg")'], 
+.icon_f563df[src='/assets/2aa9dc22c1984b01.svg'], .icon_f563df[style*='background-image: url("/assets/2aa9dc22c1984b01.svg")'], 
+.emoji_cc2dff[src='/assets/2aa9dc22c1984b01.svg'], .emoji_cc2dff[style*='background-image: url("/assets/2aa9dc22c1984b01.svg")'], 
+.emoji__01c8c[src='/assets/2aa9dc22c1984b01.svg'], .emoji__01c8c[style*='background-image: url("/assets/2aa9dc22c1984b01.svg")'], 
+.roleIcon__1e6f1[src='/assets/2aa9dc22c1984b01.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/2aa9dc22c1984b01.svg")'], 
+.emoji[src='/assets/2aa9dc22c1984b01.svg'], .emoji[style*='background-image: url("/assets/2aa9dc22c1984b01.svg")'] {
+	background: transparent !important;
+	content: url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/emojis/Apple/objects/bulb.png") !important;
+}
+@namespace xlink 'http://www.w3.org/1999/xlink';
+.sprite__04eed {
+	-webkit-mask: none !important;
+	background-color: transparent !important;
+	background-position: var(--custom-emoji-sprite-bg-position) !important;
+	background-size: var(--custom-emoji-sprite-bg-size) !important;
+}
+.spriteGreyscale__04eed {
+	filter: grayscale(1) !important;
+}
