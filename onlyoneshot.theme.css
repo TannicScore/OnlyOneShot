@@ -5,81 +5,111 @@
  * @authorLink https://above.gay
  * @authorId 888809454118768671
  * @updateUrl https://raw.githubusercontent.com/TannicScore/OnlyOneShot/main/onlyoneshot.theme.css
+ * @source https://github.com/TannicScore/OnlyOneShot
 */
 
 @import url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/main/emoji.css');
 @import url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/main/base.css');
+@import url("https://clearvision.github.io/ClearVision-v7/vencord.css");
 
 :root {
+  /* ACCENT COLORS */
   --main-color: #ff8b07;
   --hover-color: #cf5e2a;
   --success-color: #296BCB;
   --danger-color: #ff59bb;
-  --url-color: #b700ff;
-  --background-image: url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/refs/heads/main/bg.png');
-  --background-shading: 100%;
-  --background-position: center;
-  --background-size: cover;
-  --background-repeat: no-repeat;
-  --background-attachment: fixed;
-  --background-brightness: 100%;
-  --background-contrast: 100%;
-  --background-saturation: 100%;
-  --background-grayscale: 0%;
-  --background-invert: 0%;
-  --background-blur: 0px;
-  --background-overlay: rgba(0,0,0,0.6);
-  --user-popout-image: url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/refs/heads/main/bg.png');
-  --user-popout-position: center;
-  --user-popout-size: cover;
-  --user-popout-repeat: no-repeat;
-  --user-popout-attachment: fixed;
-  --user-popout-brightness: 100%;
-  --user-popout-contrast: 100%;
-  --user-popout-saturation: 100%;
-  --user-popout-grayscale: 0%;
-  --user-popout-invert: 0%;
-  --user-popout-blur: 3px;
-  --user-modal-image: url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/refs/heads/main/bg.png');
-  --user-modal-position: center;
-  --user-modal-size: cover;
-  --user-modal-repeat: no-repeat;
-  --user-modal-attachment: fixed;
-  --user-modal-brightness: 100%;
-  --user-modal-contrast: 100%;
-  --user-modal-saturation: 100%;
-  --user-modal-grayscale: 0%;
-  --user-modal-invert: 0%;
-  --user-modal-blur: 3px;
-  --home-icon: url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/refs/heads/main/icon.png');
-  --home-position: center;
-  --home-size: 40px;
-  --channel-unread: var(--main-color);
-  --channel-color: rgba(255, 231, 171, 0.8);
-  --muted-color: rgba(255,255,255,0.1);
+  
+  /* STATUS COLORS */
   --online-color: #ffa825;
   --idle-color: #5900bf;
   --dnd-color: #ff59bb;
   --streaming-color: #364495;
   --offline-color: #607f7e;
-  --main-font: gg sans;
-  --code-font: Consolas;
-  --channels-width: 220px;
-  --members-width: 240px;
-  --backdrop-overlay: rgba(0,0,0,0.8);
-  --backdrop-image: var(--background-image);
-  --backdrop-position: var(--background-position);
-  --backdrop-size: var(--background-size);
-  --backdrop-repeat: var(--background-repeat);
-  --backdrop-attachment: var(--background-attachment);
-  --backdrop-brightness: var(--background-brightness);
-  --backdrop-contrast: var(--background-contrast);
-  --backdrop-saturation: var(--background-saturation);
-  --backdrop-invert: var(--background-invert);
-  --backdrop-grayscale: var(--background-grayscale);
-  --backdrop-sepia: var(--background-sepia);
-  --backdrop-blur: var(--background-blur);
-  --bd-blue: var(--main-color);
-  --bd-blue-hover: var(--hover-color);
-  --bd-blue-active: var(--hover-color);
+
+  /* APP BACKGROUND */
+  --background-shading-percent: 100%;
+  --background-image: url(https://raw.githubusercontent.com/TannicScore/OnlyOneShot/refs/heads/main/bg.png);
+  --background-position: center;
+  --background-size: cover;
+  --background-attachment: fixed;
+  --background-filter: saturate(calc(var(--saturation-factor, 1) * 1));
+  
+  /* USER POPOUT BACKGROUND */
+  --user-popout-image: var(--background-image);
+  --user-popout-position: var(--background-position);
+  --user-popout-size: var(--background-size);
+  --user-popout-attachment: var(--background-attachment);
+  --user-popout-filter: var(--background-filter);
+  
+  /* USER MODAL BACKGROUND */
+  --user-modal-image: var(--background-image);
+  --user-modal-position: var(--background-position);
+  --user-modal-size: var(--background-size);
+  --user-modal-attachment: var(--background-attachment);
+  --user-modal-filter: var(--background-filter);
+  
+  /* HOME ICON */
+  --home-icon: url(https://raw.githubusercontent.com/TannicScore/OnlyOneShot/refs/heads/main/icon.png);
+  --home-size: cover;
+  
+  /* FONTS */
+  --main-font: "gg sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace;
+  
+  /* CHANNEL COLORS */
+  --channel-normal: var(--interactive-normal);
+  --channel-muted: var(--interactive-muted);
+  --channel-hover: var(--interactive-hover);
+  --channel-selected: var(--interactive-active);
+  --channel-selected-bg: var(--main-color);
+  --channel-unread: var(--main-color);
+  --channel-unread-hover: var(--hover-color);
+  
+  /* ACCESSIBILITY */
+  --focus-color: var(--main-color);
+}
+
+/* THEME SPECIFIC SHADING */
+/* LIGHT THEME */
+:is(.theme-light, .theme-dark .theme-light) {
+  --background-shading: rgba(252, 252, 252, 0.3);
+  --card-shading: rgba(252, 252, 252, 0.3);
+  --popout-shading: rgba(252, 252, 252, 0.7);
+  --modal-shading: rgba(252, 252, 252, 0.5);
+  --input-shading: rgba(0, 0, 0, 0.3);
+  --normal-text: #36363c;
+  --muted-text: #75757e;
+}
+
+/* ASH THEME */
+:is(.theme-dark, .theme-light .theme-dark) {
+  --background-shading: rgba(0, 0, 0, 0.4);
+  --card-shading: rgba(0, 0, 0, 0.2);
+  --popout-shading: rgba(0, 0, 0, 0.6);
+  --modal-shading: rgba(0, 0, 0, 0.4);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #d8d8db;
+  --muted-text: #aeaeb4; 
+}
+
+/* DARK THEME */
+:is(.theme-darker, .theme-light .theme-darker) {
+  --background-shading: rgba(0, 0, 0, 0.6);
+  --card-shading: rgba(0, 0, 0, 0.3);
+  --popout-shading: rgba(0, 0, 0, 0.7);
+  --modal-shading: rgba(0, 0, 0, 0.5);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #fbfbfb;
+  --muted-text: #94949c;
+}
+
+/* ONYX THEME */
+:is(.theme-midnight, .theme-light .theme-midnight) {
+  --background-shading: rgba(0, 0, 0, 0.8);
+  --card-shading: rgba(0, 0, 0, 0.4);
+  --popout-shading: rgba(0, 0, 0, 0.8);
+  --modal-shading: rgba(0, 0, 0, 0.6);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #dcdcde;
+  --muted-text: #86868e;
 }
