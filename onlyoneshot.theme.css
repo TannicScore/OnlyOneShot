@@ -9,21 +9,27 @@
 */
 
 @import url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/main/emoji.css');
-@import url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/main/base.css');
+@import url("https://clearvision.github.io/ClearVision-v7/main.css");
 @import url("https://clearvision.github.io/ClearVision-v7/vencord.css");
+
+@font-face {
+    font-family: 'Terminus';
+    src: url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/refs/heads/main/Terminus.woff') format('woff'),
+         url('https://raw.githubusercontent.com/TannicScore/OnlyOneShot/refs/heads/main/Terminus.ttf') format('truetype');
+}
 
 :root {
   /* ACCENT COLORS */
-  --main-color: #ff8b07;
+  --main-color: #ff8b07; /* The Sun */
   --hover-color: #cf5e2a;
-  --success-color: #296BCB;
-  --danger-color: #ff59bb;
+  --success-color: #24d3a4; /* Cyan/Green Phosphor */
+  --danger-color: #ff2a4a; /* Red Squares / Glitch */
   
   /* STATUS COLORS */
-  --online-color: #ffa825;
-  --idle-color: #5900bf;
-  --dnd-color: #ff59bb;
-  --streaming-color: #364495;
+  --online-color: #24d3a4; /* Phosphor */
+  --idle-color: #ffd000;
+  --dnd-color: #ff2a4a; /* Glitch */
+  --streaming-color: #b05cff; /* The World Machine */
   --offline-color: #607f7e;
 
   /* APP BACKGROUND */
@@ -49,18 +55,18 @@
   --user-modal-filter: var(--background-filter);
   
   /* HOME ICON */
-  --home-icon: url(https://raw.githubusercontent.com/TannicScore/OnlyOneShot/refs/heads/main/icon.png);
+  --home-icon: url(https://raw.githubusercontent.com/TannicScore/OnlyOneShot/refs/heads/main/sun.png);
   --home-size: cover;
   
   /* FONTS */
-  --main-font: "gg sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --main-font: "Terminus", "gg sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace;
   
   /* CHANNEL COLORS */
-  --channel-normal: var(--interactive-normal);
+  --channel-normal: var(--interactive-text-default);
   --channel-muted: var(--interactive-muted);
-  --channel-hover: var(--interactive-hover);
-  --channel-selected: var(--interactive-active);
+  --channel-hover: var(--interactive-text-hover);
+  --channel-selected: var(--interactive-text-active);
   --channel-selected-bg: var(--main-color);
   --channel-unread: var(--main-color);
   --channel-unread-hover: var(--hover-color);
@@ -69,7 +75,6 @@
   --focus-color: var(--main-color);
 }
 
-/* THEME SPECIFIC SHADING */
 /* LIGHT THEME */
 :is(.theme-light, .theme-dark .theme-light) {
   --background-shading: rgba(252, 252, 252, 0.3);
@@ -83,33 +88,86 @@
 
 /* ASH THEME */
 :is(.theme-dark, .theme-light .theme-dark) {
-  --background-shading: rgba(0, 0, 0, 0.4);
-  --card-shading: rgba(0, 0, 0, 0.2);
-  --popout-shading: rgba(0, 0, 0, 0.6);
-  --modal-shading: rgba(0, 0, 0, 0.4);
-  --input-shading: rgba(255, 255, 255, 0.05);
+  --background-shading: rgba(20, 15, 35, 0.4);
+  --card-shading: rgba(20, 15, 35, 0.2);
+  --popout-shading: rgba(20, 15, 35, 0.6);
+  --modal-shading: rgba(20, 15, 35, 0.4);
+  --input-shading: rgba(255, 139, 7, 0.05); /* Sun tinted inputs */
   --normal-text: #d8d8db;
   --muted-text: #aeaeb4; 
 }
 
 /* DARK THEME */
 :is(.theme-darker, .theme-light .theme-darker) {
-  --background-shading: rgba(0, 0, 0, 0.6);
-  --card-shading: rgba(0, 0, 0, 0.3);
-  --popout-shading: rgba(0, 0, 0, 0.7);
-  --modal-shading: rgba(0, 0, 0, 0.5);
-  --input-shading: rgba(255, 255, 255, 0.05);
+  --background-shading: rgba(15, 10, 25, 0.6);
+  --card-shading: rgba(15, 10, 25, 0.3);
+  --popout-shading: rgba(15, 10, 25, 0.7);
+  --modal-shading: rgba(15, 10, 25, 0.5);
+  --input-shading: rgba(255, 139, 7, 0.05);
   --normal-text: #fbfbfb;
   --muted-text: #94949c;
 }
 
 /* ONYX THEME */
 :is(.theme-midnight, .theme-light .theme-midnight) {
-  --background-shading: rgba(0, 0, 0, 0.8);
-  --card-shading: rgba(0, 0, 0, 0.4);
-  --popout-shading: rgba(0, 0, 0, 0.8);
-  --modal-shading: rgba(0, 0, 0, 0.6);
-  --input-shading: rgba(255, 255, 255, 0.05);
+  --background-shading: rgba(10, 5, 15, 0.8);
+  --card-shading: rgba(10, 5, 15, 0.4);
+  --popout-shading: rgba(10, 5, 15, 0.8);
+  --modal-shading: rgba(10, 5, 15, 0.6);
+  --input-shading: rgba(255, 139, 7, 0.1);
   --normal-text: #dcdcde;
   --muted-text: #86868e;
+}
+
+* {
+    -webkit-font-smoothing: none;
+    font-smooth: never;
+}
+
+.childWrapper__6e9f8 > svg, .avatar_c19a55, .avatar__07f91 {
+    image-rendering: pixelated;
+}
+.childWrapper__6e9f8 > svg {
+    filter: drop-shadow(0 0 4px var(--main-color));
+}
+
+.button__201d5, .button_a22cb0, .wrapper__72c38, .input__0f084, 
+.channelTextArea__74017, .scrollableContainer__74017, .menu_c1e9c4, 
+.popout_a16aea, .option_a16aea, .cardPrimary__73069, .card_b5493b, 
+.container__0f2e8, .searchFilter_bd8186, .searchAnswer_bd8186, 
+.messageGroupWrapper_e8b59c, .tooltipPrimary_c36707, .role_b4b2c3,
+.layer__960e4 .outer_c0bea0, .root__49fc1, .reaction__23977, .reactionBtn__23977 {
+    border-radius: 0px !important;
+}
+
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track {
+    border-radius: 0px !important;
+    border: none !important;
+}
+
+.menu_c1e9c4, .messagesPopoutWrap_e8b59c, .browser_d98031, 
+.root__49fc1, .quickSelectPopout_ebaca5, .recentMentionsPopout__95796 {
+    border: 2px solid var(--hsl-main-color) !important;
+    box-shadow: 0 0 10px rgba(255, 139, 7, 0.15) !important;
+}
+
+.markup__75297 code {
+    background: rgba(0, 0, 0, 0.7) !important;
+    color: var(--success-color); 
+    border: 1px solid var(--success-color) !important;
+    border-radius: 0px !important;
+    text-shadow: 0 0 3px rgba(36, 211, 164, 0.4);
+}
+
+.channelTextArea__74017 {
+    border: 1px solid var(--hsl-main-color) !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+:is(.theme-dark,.theme-light):not(.platform-osx) .leading_c38106::before {
+  content: "Only" !important; 
+}
+
+:is(.theme-dark,.theme-light):not(.platform-osx) .leading_c38106::after {
+  content: "OneShot" !important; 
 }
